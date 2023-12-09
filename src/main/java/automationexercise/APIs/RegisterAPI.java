@@ -50,23 +50,23 @@ public class RegisterAPI {
     }*/
     public RegisterAPI createUser (String userName , String email , String password){
         List<List<Object>> formInputs = Arrays.asList(
-                Arrays.asList("name",userName),
-                Arrays.asList("email",email),
-                Arrays.asList("password",password),
-                Arrays.asList("title","Mr."),
-                Arrays.asList("birth_date","12"),
-                Arrays.asList("birth_month","Dec"),
-                Arrays.asList("birth_year","1998"),
-                Arrays.asList("firstname","Mostafa"),
-                Arrays.asList("lastname","Elkholy"),
-                Arrays.asList("company","_VOIS"),
-                Arrays.asList("address1","135 port"),
-                Arrays.asList("address2","DownTown"),
-                Arrays.asList("country","India"),
-                Arrays.asList("name","11617"),
-                Arrays.asList("name","Cairo"),
-                Arrays.asList("name","Cairo"),
-                Arrays.asList("mobile_number","01119832364")
+                Arrays.asList("name", userName),
+                Arrays.asList("email", email),
+                Arrays.asList("password", password),
+                Arrays.asList("title", "Mr."),
+                Arrays.asList("birth_date", "12"),
+                Arrays.asList("birth_month", "Dec"),
+                Arrays.asList("birth_year", "1998"),
+                Arrays.asList("firstname", "Mostafa"),
+                Arrays.asList("lastname", "Elkholy"),
+                Arrays.asList("company", "_VOIS"),
+                Arrays.asList("address1", "135 port"),
+                Arrays.asList("address2", "DownTown"),
+                Arrays.asList("country", "India"),
+                Arrays.asList("name", "11617"),
+                Arrays.asList("name", "Cairo"),
+                Arrays.asList("name", "Cairo"),
+                Arrays.asList("mobile_number", "01119832364")
         );
         apidriver.post("createAccount").setParameters(formInputs, RestActions.ParametersType.FORM).setContentType(ContentType.URLENC).setTargetStatusCode(200).perform();
         return this;
